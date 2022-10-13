@@ -1,6 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import { addingNewTask, todo } from "./ReduxState";
 import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./store";
 
 interface jobType {
 	job: string;
@@ -10,7 +11,7 @@ interface jobType {
 const ReduxComp: FC = () => {
 	const dispatch = useDispatch();
 	const [stack, setStack] = useState<string>("");
-	const data = useSelector((state: todo["task"]) => state);
+	const data = useSelector((state: RootState) => state.myReducer.task);
 
 	console.log("this is my data", data);
 
