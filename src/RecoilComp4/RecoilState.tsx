@@ -10,7 +10,6 @@ export const showName = atom({
 	default: "jesu",
 });
 
-
 export const changeData = selector({
-	key : ""
-})
+	key: "",
+});
